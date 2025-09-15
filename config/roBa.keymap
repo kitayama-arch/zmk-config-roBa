@@ -99,10 +99,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &kp C_VOL_UP  &kp LG(LA(LEFT_ARROW))  &kp UP_ARROW      &kp RG(RA(RIGHT_ARROW))  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &kp C_VOL_DN  &kp LEFT_ARROW          &kp DOWN_ARROW    &kp RIGHT_ARROW          &kp C_BRI_UP
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &kp K_MUTE    &kp C_PREV              &kp C_PLAY_PAUSE  &kp C_NEXT               &kp C_BRI_DN
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                                                                           &trans
+&kp ESCAPE     &kp LBKT  &kp DQT    &kp RBKT  &kp AT                        &kp C_VOL_UP  &kp LG(LA(LEFT_ARROW))  &kp UP_ARROW      &kp RG(RA(RIGHT_ARROW))  &trans
+&kp BACKSLASH  &kp LPAR  &kp SQT    &kp RPAR  &kp HASH  &trans      &trans  &kp C_VOL_DN  &kp LEFT_ARROW          &kp DOWN_ARROW    &kp RIGHT_ARROW          &kp C_BRI_UP
+&kp TILDE      &kp LBRC  &kp GRAVE  &kp RBRC  &kp DLLR  &trans      &trans  &kp K_MUTE    &kp C_PREV              &kp C_PLAY_PAUSE  &kp C_NEXT               &kp C_BRI_DN
+&trans         &trans    &trans     &trans    &trans    &trans      &trans  &trans                                                                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
