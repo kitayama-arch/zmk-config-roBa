@@ -2,39 +2,39 @@ layout: {zmk_keyboard: roBa}
 layers:
   default:
   - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - {t: P, h: SCROLL}
-  - A
-  - S
-  - D
-  - F
-  - G
-  - '&mkp MCLK'
-  - '-'
-  - H
-  - J
-  - K
   - L
-  - '@'
-  - {t: Z, h: LEFT SHIFT}
+  - U
+  - '-'
+  - ESC
+  - F
+  - W
+  - R
+  - Y
+  - {t: P, h: SCROLL}
+  - E
+  - I
+  - A
+  - O
+  - TAB
+  - '&mkp MCLK'
+  - {t: ▽, type: trans}
+  - K
+  - T
+  - N
+  - S
+  - H
+  - {t: CAPSLOCK, h: LEFT SHIFT}
+  - Z
   - X
   - C
   - V
-  - B
-  - TAB
-  - '~'
-  - N
-  - M
-  - ','
   - .
-  - CAPSLOCK
+  - ','
+  - G
+  - D
+  - M
+  - J
+  - B
   - LCTRL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -60,7 +60,7 @@ layers:
   - KP 5
   - KP 4
   - Gui+Sft+4
-  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
   - '?'
   - '!'
   - ;
@@ -72,7 +72,7 @@ layers:
   - KP 2
   - KP 1
   - Gui+Sft+5
-  - {t: ▽, type: trans}
+  - {t: BT, h: '1'}
   - '*'
   - '|'
   - /
