@@ -39,27 +39,27 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: BACKSPACE, h: LEFT ALT}
-  - {t: LANG5, h: LEFT COMMAND}
+  - {t: LANG2, h: LEFT COMMAND}
   - {t: ENTER, h: NUM}
   - {t: SPACE, h: ARROW}
-  - {t: LANG4, h: RIGHT COMMAND}
+  - {t: LANG1, h: RIGHT COMMAND}
   - RCTRL
   NUM:
-  - {t: ▽, type: trans}
   - KP 9
   - KP 8
   - KP 7
-  - Sft+Gui+3
+  - KP 6
+  - KP 5
   - '&'
   - <
   - +
   - '>'
   - ^
-  - {t: ▽, type: trans}
-  - KP 6
-  - KP 5
   - KP 4
-  - Gui+Sft+4
+  - KP 3
+  - KP 2
+  - KP 1
+  - KP 0
   - {t: BT, h: '0'}
   - '?'
   - '!'
@@ -67,10 +67,10 @@ layers:
   - .
   - ':'
   - '='
-  - KP 0
-  - KP 3
-  - KP 2
-  - KP 1
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+Gui+3
+  - Sft+Gui+4
   - Gui+Sft+5
   - {t: BT, h: '1'}
   - '*'
@@ -104,7 +104,7 @@ layers:
   - ''''
   - )
   - '#'
-  - {t: ▽, type: trans}
+  - '&tog_ls'
   - F6
   - VOL UP
   - LEFT ARROW
@@ -220,14 +220,3 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-combos:
-- p: [11, 12]
-  k: TAB
-- p: [12, 13]
-  k: Sft+TAB
-- p: [11, 10]
-  k: '&to_layer_0 INT_MUHENKAN'
-- p: [20, 21]
-  k: '"'
-- p: [24, 25]
-  k: '='
