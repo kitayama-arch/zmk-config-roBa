@@ -82,10 +82,10 @@
 
         NUM {
             bindings = <
-&kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7       &kp KP_NUMBER_6       &kp KP_NUMBER_5                               &kp AMPS         &kp LT     &kp PLUS   &kp GT     &kp CARET
-&kp KP_NUMBER_4  &kp KP_NUMBER_3  &kp KP_NUMBER_2       &kp KP_NUMBER_1       &kp KP_NUMBER_0  &bt BT_SEL 0      &kp QMARK  &kp EXCLAMATION  &kp SEMI   &kp DOT    &kp COLON  &kp EQUAL
-&trans           &trans           &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LG(LS(N5))   &bt BT_SEL 1      &kp STAR   &kp PIPE         &kp SLASH  &kp UNDER  &kp PRCNT  &kp TILDE
-&trans           &trans           &trans                &trans                &trans           &trans            &trans     &trans                                            &trans
+&kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7       &kp KP_NUMBER_6       &kp KP_NUMBER_5                                &kp AMPS         &kp LT     &kp PLUS   &kp GT     &kp CARET
+&kp KP_NUMBER_4  &kp KP_NUMBER_3  &kp KP_NUMBER_2       &kp KP_NUMBER_1       &kp KP_NUMBER_0  &bt BT_NXT         &kp QMARK  &kp EXCLAMATION  &kp SEMI   &kp DOT    &kp COLON  &kp EQUAL
+&trans           &trans           &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LG(LS(N5))   &kp LC(LG(F))      &kp STAR   &kp PIPE         &kp SLASH  &kp UNDER  &kp PRCNT  &kp TILDE
+&trans           &trans           &trans                &trans                &trans           &trans             &trans     &trans                                            &trans
             >;
 
             sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
