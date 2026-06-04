@@ -11,9 +11,6 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-pmw3610-driver
-      remote: kumamuk-git
-      revision: main
     - name: zmk-layout-shift
       remote: kot149
       revision: v1
