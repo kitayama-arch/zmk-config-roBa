@@ -65,14 +65,6 @@
             tap-ms = <20>;
         };
 
-        left_encoder_app_control: behavior_sensor_rotate_left_encoder_app_control {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-
-            // Mac 側でアプリごとの操作へ割り当てるため、通常のスクロールと区別する。
-            bindings = <&kp F13>, <&kp F14>;
-            tap-ms = <20>;
-        };
     };
 
     keymap {
@@ -86,7 +78,8 @@
 &kp LCTRL                &trans  &trans  &mt LEFT_ALT BACKSPACE  &mt LEFT_COMMAND LANG2  &lt 1 ENTER      &lt 2 SPACE  &mt RIGHT_COMMAND LANG1                       &kp RCTRL
             >;
 
-            sensor-bindings = <&left_encoder_app_control>, <&scroll_up_down>;
+            // 左はMac側のアプリ別操作用、右は従来どおりスクロール。
+            sensor-bindings = <&inc_dec_kp F13 F14>, <&scroll_up_down>;
         };
 
         NUM {
@@ -97,7 +90,7 @@
 &trans           &trans           &trans                &trans                &trans           &trans             &trans     &trans                                            &trans
             >;
 
-            sensor-bindings = <&left_encoder_app_control>, <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp F13 F14>, <&scroll_up_down>;
         };
 
         ARROW {
@@ -108,7 +101,7 @@
 &trans          &trans    &trans     &trans    &trans    &trans          &trans               &trans                                                                   &trans
             >;
 
-            sensor-bindings = <&left_encoder_app_control>, <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp F13 F14>, <&scroll_up_down>;
         };
 
         MOUSE {
