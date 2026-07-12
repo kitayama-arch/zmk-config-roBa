@@ -78,8 +78,8 @@
 &kp LCTRL                &trans  &trans  &mt LEFT_ALT BACKSPACE  &mt LEFT_COMMAND LANG2  &lt 1 ENTER      &lt 2 SPACE  &mt RIGHT_COMMAND LANG1                       &kp RCTRL
             >;
 
-            // 左はMac側のアプリ別操作用、右は従来どおりスクロール。
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            // 左右ともスクロール。左はBetterTouchToolでアプリ別に変換する。
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         NUM {
@@ -90,7 +90,7 @@
 &trans           &trans           &trans                &trans                &trans           &trans             &trans     &trans                                            &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         ARROW {
@@ -101,7 +101,7 @@
 &trans          &trans    &trans     &trans    &trans    &trans          &trans               &trans                                                                   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         MOUSE {
@@ -112,7 +112,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         SCROLL {
@@ -123,7 +123,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
     };
 };
