@@ -79,9 +79,8 @@
 &kp LCTRL                &trans  &trans  &mt LEFT_ALT BACKSPACE  &mt LEFT_COMMAND LANG2  &lt 1 ENTER      &lt 2 SPACE  &mt RIGHT_COMMAND LANG1                       &kp RCTRL
             >;
 
-            // 左はF20/F21。Mac側のroBa専用ルーターがタグ付きスクロールへ変換する。
-            // 右は従来どおり通常スクロール。
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            // 左右ともネイティブの通常スクロール。アプリ別変換はBTT側で行う。
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         NUM {
@@ -92,7 +91,7 @@
 &trans           &trans           &trans                &trans                &trans           &trans             &trans     &trans                                            &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         ARROW {
@@ -103,7 +102,7 @@
 &trans          &trans    &trans     &trans    &trans    &trans          &trans               &trans                                                                   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         MOUSE {
@@ -114,7 +113,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
 
         SCROLL {
@@ -125,7 +124,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp F20 F21>, <&scroll_up_down>;
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
         };
     };
 };
