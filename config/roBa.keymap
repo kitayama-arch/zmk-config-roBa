@@ -43,6 +43,29 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        // BTT identifies the left encoder by this transient modifier.
+        // It must arrive before the wheel event so Smooth Zoom can consume
+        // only this encoder's scroll, leaving ordinary scroll untouched.
+        btt_zoom_scroll_up: btt_zoom_scroll_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <20>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &msc SCRL_UP>,
+                       <&macro_release &kp LALT>;
+        };
+
+        btt_zoom_scroll_down: btt_zoom_scroll_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <20>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &msc SCRL_DOWN>,
+                       <&macro_release &kp LALT>;
+        };
     };
 
     behaviors {
@@ -65,6 +88,12 @@
             tap-ms = <20>;
         };
 
+        btt_zoom_up_down: behavior_sensor_rotate_btt_zoom_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&btt_zoom_scroll_up>, <&btt_zoom_scroll_down>;
+        };
+
     };
 
     keymap {
@@ -78,8 +107,9 @@
 &kp LCTRL                &trans  &trans  &mt LEFT_ALT BACKSPACE  &mt LEFT_COMMAND LANG2  &lt 1 ENTER      &lt 2 SPACE  &mt RIGHT_COMMAND LANG1                       &kp RCTRL
             >;
 
-            // 左右ともスクロール。左はBetterTouchToolでアプリ別に変換する。
-            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+            // 左はOption付きスクロールを送り、BTTがアプリ別Smooth Zoomへ変換する。
+            // 右は従来どおり通常スクロール。
+            sensor-bindings = <&btt_zoom_up_down>, <&scroll_up_down>;
         };
 
         NUM {
@@ -90,7 +120,7 @@
 &trans           &trans           &trans                &trans                &trans           &trans             &trans     &trans                                            &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+            sensor-bindings = <&btt_zoom_up_down>, <&scroll_up_down>;
         };
 
         ARROW {
@@ -101,7 +131,7 @@
 &trans          &trans    &trans     &trans    &trans    &trans          &trans               &trans                                                                   &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+            sensor-bindings = <&btt_zoom_up_down>, <&scroll_up_down>;
         };
 
         MOUSE {
@@ -112,7 +142,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+            sensor-bindings = <&btt_zoom_up_down>, <&scroll_up_down>;
         };
 
         SCROLL {
@@ -123,7 +153,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+            sensor-bindings = <&btt_zoom_up_down>, <&scroll_up_down>;
         };
     };
 };
