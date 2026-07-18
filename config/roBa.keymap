@@ -74,7 +74,7 @@
         default_layer {
             bindings = <
 &kp Q                    &kp L   &kp U   &kp MINUS               &kp ESC                                               &kp F                    &kp W  &kp R  &kp Y  &kp P
-&kp E                    &kp I   &kp A   &kp O                   &kp TAB                 &mkp MCLK        &trans       &kp K                    &kp T  &kp N  &kp S  &lt 4 H
+&lt 5 E                  &kp I   &kp A   &kp O                   &kp TAB                 &mkp MCLK        &trans       &kp K                    &kp T  &kp N  &kp S  &lt 4 H
 &mt LEFT_SHIFT CAPSLOCK  &kp Z   &kp X   &kp C                   &kp V                   &kp PERIOD       &kp COMMA    &kp G                    &kp D  &kp M  &kp J  &kp B
 &kp LCTRL                &trans  &trans  &mt LEFT_ALT BACKSPACE  &mt LEFT_COMMAND LANG2  &lt 1 ENTER      &lt 2 SPACE  &mt RIGHT_COMMAND LANG1                       &kp RCTRL
             >;
@@ -121,6 +121,17 @@
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+
+            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+        };
+
+        E_LAYER {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_ARROW  &kp C_PLAY_PAUSE  &kp RIGHT_ARROW  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
