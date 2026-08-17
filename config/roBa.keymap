@@ -130,7 +130,7 @@
         // 左手のピリオドキーをホールドして使うメディア／タブ操作レイヤー。
         LEFT_HAND_PERIOD_LAYER {
             bindings = <
-&trans  &trans  &kp LA(LG(UP_ARROW))  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(LEFT_ARROW)  &kp LA(LG(UP_ARROW))  &kp RC(RIGHT_ARROW)  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_ARROW  &kp C_PLAY_PAUSE  &kp RIGHT_ARROW  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LA(LG(DOWN_ARROW))  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
