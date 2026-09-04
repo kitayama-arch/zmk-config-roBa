@@ -225,7 +225,7 @@ layers:
   - Ctl+LEFT ARROW
   - UP ARROW
   - Ctl+RIGHT ARROW
-  - {t: ▽, type: trans}
+  - Alt+Gui+UP ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -235,7 +235,7 @@ layers:
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - Alt+Gui+UP ARROW
+  - Alt+Gui+DOWN ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -247,7 +247,7 @@ layers:
   - {t: ▽, type: trans}
   - PLAY PAUSE
   - {t: ▽, type: trans}
-  - Alt+Gui+DOWN ARROW
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
