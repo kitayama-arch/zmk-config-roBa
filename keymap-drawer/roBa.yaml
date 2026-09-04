@@ -221,9 +221,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   LEFT_HAND_PERIOD_LAYER:
-  - {t: ▽, type: trans}
+  - VOL UP
   - Ctl+LEFT ARROW
-  - {t: ▽, type: trans}
+  - UP ARROW
   - Ctl+RIGHT ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -231,9 +231,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - VOL DN
   - LEFT ARROW
-  - PLAY PAUSE
+  - DOWN ARROW
   - RIGHT ARROW
   - Alt+Gui+UP ARROW
   - {t: ▽, type: trans}
@@ -245,7 +245,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - PLAY PAUSE
   - {t: ▽, type: trans}
   - Alt+Gui+DOWN ARROW
   - {type: held}
