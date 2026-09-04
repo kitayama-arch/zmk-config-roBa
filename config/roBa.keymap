@@ -16,25 +16,19 @@
     quick-tap-ms = <0>;
 };
 
-&trackball {
-    automouse-layer = <3>;
-    scroll-layers = <4>;
 
-    // arrows {
-    //     layers = <3>;
-    //     bindings =
-    //         <&kp RIGHT_ARROW>,
-    //         <&kp LEFT_ARROW>,
-    //         <&kp UP_ARROW>,
-    //         <&kp DOWN_ARROW>;
-    //     tick = <10>;
-    //     wait-ms = <5>;
-    //     tap-ms = <5>;
-    // };
-};
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+        // Press Q + P together to unlock Studio without replacing a key.
+        studio_unlock_combo {
+            timeout-ms = <50>;
+            key-positions = <0 9>;
+            bindings = <&studio_unlock>;
+            slow-release;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {

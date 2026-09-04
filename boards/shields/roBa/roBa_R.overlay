@@ -1,5 +1,7 @@
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
+#include <input/processors/runtime-input-processor.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 
 &default_transform {
     col-offset = <6>;
@@ -29,8 +31,19 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&zip_temp_layer 3 10000>;
+        // Retain existing auto-mouse timeout and excluded key positions.
+        input-processors = <&mouse_runtime_input_processor &zip_temp_layer 3 10000>;
+
+        scroller {
+            layers = <4>;
+            input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+        };
     };
+};
+
+&scroll_runtime_input_processor {
+    // Approximate the previous driver's 16-count scroll threshold.
+    scale-divisor = <16>;
 };
 
 &pinctrl {
@@ -68,5 +81,9 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        cpi = <400>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };

@@ -1,19 +1,29 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: kumamuk-git
-      url-base: https://github.com/kumamuk-git
+    - name: cormoran
+      url-base: https://github.com/cormoran
     - name: kot149
       url-base: https://github.com/kot149
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3-branch
+      remote: cormoran
+      revision: 09fb1c9084e09171f490bb64ca7c86b331cfd614
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: kumamuk-git
-      revision: main
+      remote: cormoran
+      revision: 274c92bec8a0e98499ceff653b8b9bd6486effbe
+    - name: zmk-module-ble-management
+      remote: cormoran
+      revision: 851661cd21f2aded8ec649da86e01a207dc4b973
+    - name: zmk-module-battery-history
+      remote: cormoran
+      revision: 465e53e9cfe0aae7ea38cbcf4d5474c37e796b6b
+    - name: zmk-module-settings-rpc
+      remote: cormoran
+      revision: ad1c995cf910ca989ecd6352a1d0b41ccb18362c
+    - name: zmk-module-runtime-input-processor
+      remote: cormoran
+      revision: 8103d0618856a099369f86e93b462ee987cf159a
     - name: zmk-layout-shift
       remote: kot149
       revision: v1
