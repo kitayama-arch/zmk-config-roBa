@@ -128,11 +128,12 @@
         };
 
         // 左手のピリオドキーをホールドして使うメディア／タブ操作レイヤー。
+        // 上下のタブ移動は右矢印の右隣（TAB）と、その下（V）に配置する。
         LEFT_HAND_PERIOD_LAYER {
             bindings = <
-&trans  &kp LC(LEFT_ARROW)  &kp LA(LG(UP_ARROW))  &kp RC(RIGHT_ARROW)  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_ARROW  &kp C_PLAY_PAUSE  &kp RIGHT_ARROW  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LA(LG(DOWN_ARROW))  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(LEFT_ARROW)  &trans                     &kp RC(RIGHT_ARROW)  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_ARROW  &kp C_PLAY_PAUSE  &kp RIGHT_ARROW  &kp LA(LG(UP_ARROW))  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                     &trans  &kp LA(LG(DOWN_ARROW))  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
