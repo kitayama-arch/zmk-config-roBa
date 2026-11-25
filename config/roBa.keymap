@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
@@ -47,6 +48,16 @@
     };
 
     behaviors {
+        // Preserve the ARROW layer normally, but let Option+Space remain
+        // physically held so host applications can distinguish tap and hold.
+        option_space: option_space {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&lt 2 SPACE>, <&kp SPACE>;
+            mods = <(MOD_LALT | MOD_RALT)>;
+            keep-mods = <(MOD_LALT | MOD_RALT)>;
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -76,7 +87,7 @@
 &kp Q                    &kp L   &kp U   &kp MINUS               &kp ESC                                               &kp F                    &kp W  &kp R  &kp Y  &kp P
 &kp E                    &kp I   &kp A   &kp O                   &kp TAB                 &mkp MCLK        &trans       &kp K                    &kp T  &kp N  &kp S  &lt 4 H
 &mt LEFT_SHIFT CAPSLOCK  &kp Z   &kp X   &kp C                   &kp V                   &lt 5 PERIOD      &kp COMMA    &kp G                    &kp D  &kp M  &kp J  &kp B
-&kp LCTRL                &trans  &trans  &mt LEFT_ALT BACKSPACE  &mt LEFT_COMMAND LANG2  &lt 1 ENTER      &lt 2 SPACE  &mt RIGHT_COMMAND LANG1                       &kp RCTRL
+&kp LCTRL                &trans  &trans  &mt LEFT_ALT BACKSPACE  &mt LEFT_COMMAND LANG2  &lt 1 ENTER      &option_space  &mt RIGHT_COMMAND LANG1                       &kp RCTRL
             >;
 
             // 左右ともネイティブの通常スクロール。アプリ別変換はBTT側で行う。
