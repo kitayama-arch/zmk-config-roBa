@@ -41,7 +41,7 @@ layers:
   - {t: BACKSPACE, h: LEFT ALT}
   - {t: LANG2, h: LEFT COMMAND}
   - {t: ENTER, h: NUM}
-  - {t: SPACE, h: ARROW}
+  - {t: SPACE, h: ARROW, s: SPACE}
   - {t: LANG1, h: RIGHT COMMAND}
   - RCTRL
   NUM:
